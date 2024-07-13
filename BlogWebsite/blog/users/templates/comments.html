@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Blog - All comments
+{% endblock %}
+
+
+{% block content %}
+  <p><a href="/">HOME</a></p>
+  <h1>Comments</h1>
+
+  <ul>
+    {% for x in comments %}
+      <li> <h3>Post ID: {{ x.id_post.post_id }} </h3> </li>
+      <li> <h3>User ID: {{ x.id_user.user_id }}</h3> </li>
+      <li> <p>Comment Content: {{ x.content_c }}</p> </li>
+      <li> <p>Date Posted: {{ x.date_posted }}</p> </li>
+      <p>---------------------------------------------------------------------------------------</p>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

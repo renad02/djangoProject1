@@ -1,0 +1,20 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Blog - List of all users
+{% endblock %}
+
+
+{% block content %}
+  <p><a href="/">HOME</a></p>
+  <h1>Users</h1>
+
+  <ul>
+    {% for x in myusers %}
+      <li><h2>{{ x.username }} </h2></li>
+      <p>Email: {{ x.email }}</p>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+
